@@ -189,6 +189,7 @@
     display: flex;
     gap: 20px;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 .activity_card {
     background-color: #fff;
@@ -199,8 +200,8 @@
     width: 300px;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    flex-grow: 1;
+    flex: 1;
+    min-height: 450px;
 }
 .activity_card:hover {
     transform: translateY(-5px);
@@ -231,6 +232,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    justify-content: space-between;
 }
 .activity-title {
     font-family: var(--text-font);
@@ -246,7 +248,8 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-block: 24px;
+    margin: 24px 0;
+    flex-grow: 1;
 }
 .activity-meta-item {
     font-family: var(--text-font);
@@ -259,9 +262,8 @@
 .activity-actions {
     display: flex;
     gap: 10px;
-    margin-top: auto;
     padding-top: 20px;
-    align-self: flex-end;
+    margin-top: auto;
 }
 .activity-btn {
     font-family: var(--text-font);
@@ -283,11 +285,6 @@
 .activity-btn:hover {
     opacity: 0.9;
     transform: scale(1.02);
-}
-.activity_div_cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 /* students activity section */
 .activity_section{
