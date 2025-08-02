@@ -36,7 +36,7 @@
 }
 .header_rightSide{
     display: flex;
-    column-gap: 69px;
+    column-gap: 40px;
     align-items: center;
 }
 .nav_ul{
@@ -93,24 +93,34 @@
 
 /* after header section */
 .hero{
-    background-color: #022762;
-    padding: 141px 51px;
+    background-color: #1a4a8a;
+    padding: 100px 51px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.1);
 }
 .hero_text_div{
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     align-items: flex-start;
+    z-index: 2;
+    position: relative;
 }
 .hero_h2{
     font-family: var(--text-font);
     font-weight: 700;
     font-style: Bold;
-    font-size: 48px;
+    font-size: 52px;
     line-height: 110.00000000000001%;
     letter-spacing: -2%;
     text-transform: uppercase;
     color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }   
 .hero_p{
     width: 320px;
@@ -135,12 +145,14 @@
     display: flex;
     column-gap: 19px;
     align-items: center;
-    background-color: #00E6FB;
+    background: linear-gradient(135deg, #00E6FB 0%, #00D4E6 100%);
     border: none;
     border-radius: 40px;
-    padding: 12px 20px;
+    padding: 16px 32px;
     margin-top: 20px;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 230, 251, 0.3);
+    transition: all 0.3s ease;
 }
 .hero_btn:hover {
     background-color: #00C7E0; /* Slightly darker cyan */
@@ -148,19 +160,71 @@
     transition: all 0.3s ease;
 }
 
+/* Hero Image Styles */
+.hero_img_div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero_img_div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 0;
+}
+
+/* Fade effect overlay to blend with hero background */
+.hero_img_div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        rgba(26, 74, 138, 1) 0%, 
+        rgba(26, 74, 138, 0.9) 20%, 
+        rgba(26, 74, 138, 0.7) 40%, 
+        rgba(26, 74, 138, 0.5) 60%, 
+        rgba(26, 74, 138, 0.3) 80%, 
+        rgba(26, 74, 138, 0) 100%);
+    z-index: 1;
+}
+
+
+
 /* activity section */
 .activity_h3{
     font-family: var(--text-font);
     font-weight: 700;
     font-style: Bold;
-    font-size: 36px;
+    font-size: 42px;
     line-height: 110.00000000000001%;
     letter-spacing: -3%;
     text-transform: uppercase;
     color: #022762;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.activity_h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #00E6FB 0%, #00D4E6 100%);
+    border-radius: 2px;
 }
 .activity_section{
-    padding: 200px 51px;
+    padding: 50px;
 }
 .activity_text_div{
     display: flex;
@@ -193,18 +257,20 @@
 }
 .activity_card {
     background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 300px;
     display: flex;
     flex-direction: column;
     flex: 1;
     min-height: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .activity_card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
 }
 .activity-image {
     position: relative;
@@ -218,14 +284,16 @@
 }
 .activity-badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #00E6FB;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #00E6FB 0%, #00D4E6 100%);
     color: #022762;
-    padding: 4px 8px;
-    border-radius: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 230, 251, 0.3);
+    backdrop-filter: blur(10px);
 }
 .activity-content {
     padding: 20px;
@@ -239,7 +307,7 @@
     font-weight: 700;
     font-style: Bold;
     font-size: 18px;
-    line-height: 100%;
+    line-height: 24px;
     letter-spacing: -1%;
     text-transform: uppercase;
     color: #022762;
@@ -261,30 +329,39 @@
 }
 .activity-actions {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     padding-top: 20px;
     margin-top: auto;
+    border-top: 1px solid #e8e8e8;
+    background: linear-gradient(180deg, rgba(248, 249, 250, 0.5) 0%, transparent 100%);
+    margin: 20px -20px -20px -20px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 0 0 24px 24px;
 }
 .activity-btn {
     font-family: var(--text-font);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
+    padding: 9px 18px;
+    border-radius: 22px;
+    font-size: 13px;
+    font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: none;
 }
 .details-btn {
-    background-color: #F3F3F3;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     color: #022762;
+
 }
 .register-btn {
-    background-color: #022762;
+    background: linear-gradient(135deg, #022762 0%, #1a4a8a 100%);
     color: white;
 }
 .activity-btn:hover {
     opacity: 0.9;
-    transform: scale(1.02);
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 /* students activity section */
 .activity_section{
@@ -318,9 +395,12 @@
     width: 300px;
     height: 170px;
     padding: 20px;
-    background-color: #F3F3F3;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 24px;
     position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
 }
 .card-content {
     flex-grow: 1;
