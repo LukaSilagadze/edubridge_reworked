@@ -1,124 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/node_modules/alk-life/css/alk-life.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="https://kit.fontawesome.com/dc2d1e509b.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/node_modules/alk-life/css/alk-life.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Georgian:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/dc2d1e509b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
     <title>Edubridge</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- header -->
-        <header class="header">
-            <div class="logo">
-                <a href="./index.html" class="logo">
-                    <img src="./images/logo.svg" alt="logo">
-                    <h1 class="logo_text">EduBridge</h1>
+      <!-- header -->
+      <header class="header">
+        <div class="logo">
+          <a href="./index.html" class="logo">
+            <img src="./images/logo.svg" alt="logo" />
+            <h1 class="logo_text">EduBridge</h1>
+          </a>
+        </div>
+        <div class="header_rightSide">
+          <nav class="nav">
+            <ul class="nav_ul">
+              <li><a href="#" class="nav_a">აქტივობები</a></li>
+              <li><a href="#" class="nav_a">სერტიფიკატები</a></li>
+              <li><a href="#" class="nav_a">რჩევები</a></li>
+              <li><a href="#" class="nav_a">კონტაქტი</a></li>
+            </ul>
+          </nav>
+          <button class="header_btn">ავტორიზაცია</button>
+        </div>
+      </header>
+      <!-- after header section-->
+      <section class="hero">
+        <div class="hero_text_div">
+          <h2 class="hero_h2">
+            აღმოაჩინე. <br />მიიღე მონაწილეობა. <br />გამოიჩინე თავი.
+          </h2>
+          <p class="hero_p">
+            იპოვე ოლიმპიადები, ტურნირები და სხვა სასკოლო აქტივობები. განათავსე
+            შენი წარმატებები ერთ პორტფოლიოში.
+          </p>
+          <button class="hero_btn">
+            <img src="./images/arrow.svg" alt="" />აქტივობები
+          </button>
+        </div>
+        <div class="hero_img_div">
+          <img src="./images/hero_image.jpeg" alt="Hero image" />
+        </div>
+      </section>
+      <!-- activity section -->
+      <section class="activity_section">
+        <div class="activity_div">
+          <div class="activity_text_div">
+            <h3 class="activity_h3">მიმდინარე აქტივობები</h3>
+            <div class="activity_seeAll">
+              <img src="./images/arrow.svg" alt="" />
+              <a href="#" class="activity_a">ყველას ნახვა</a>
+            </div>
+          </div>
+          <div id="activity_div_cards" class="activity_div_cards"></div>
+        </div>
+        <div class="students_acticity_div">
+          <h2 class="students_acticity_h2">ბოლო აქტივობები</h2>
+          <article class="students_acticity_card">
+            <div class="card-content">
+              <span class="students_activity_name">ლუკა სილაგაძე</span>
+              <span class="students_activity_text"
+                >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
+                <span class="students_activity_achiv">ოქროს მედალი</span></span>
+            </div>
+            <div class="card-buttons">
+              <button class="card-btn like-btn">
+                <i class="fa-solid fa-heart"></i>
+                <span class="like-count">12</span>
+              </button>
+              <button class="card-btn comment-btn">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>კომენტარი</span>
+              </button>
+            </div>
+          </article>
+          <article class="students_acticity_card">
+            <div class="card-content">
+              <span class="students_activity_name">ლუკა სილაგაძე</span>
+              <span class="students_activity_text"
+                >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
+                <span class="students_activity_achiv">ოქროს მედალი</span></span
+              >
+            </div>
+            <div class="card-buttons">
+              <button class="card-btn like-btn">
+                <i class="fa-solid fa-heart"></i>
+                <span class="like-count">12</span>
+              </button>
+              <button class="card-btn comment-btn">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>კომენტარი</span>
+              </button>
+            </div>
+          </article>
+          <article class="students_acticity_card">
+            <div class="card-content">
+              <span class="students_activity_name">ლუკა სილაგაძე</span>
+              <span class="students_activity_text"
+                >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
+                <span class="students_activity_achiv">ოქროს მედალი</span></span
+              >
+            </div>
+            <div class="card-buttons">
+              <button class="card-btn like-btn">
+                <i class="fa-solid fa-heart"></i>
+                <span class="like-count">12</span>
+              </button>
+              <button class="card-btn comment-btn">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>კომენტარი</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- How It Works section -->
+      <section class="how_it_works_section">
+        <div class="how_it_works_container">
+          <h3 class="how_it_works_h3">როგორ მუშაობს</h3>
+          <div class="steps_container">
+            <div class="step_card">
+              <div class="step_number">1</div>
+              <div class="step_icon">
+                <i class="fa-solid fa-search"></i>
+              </div>
+              <h4 class="step_title">იპოვე აქტივობა</h4>
+              <p class="step_description">დაათვალიერე ასობით სასკოლო აქტივობა, ოლიმპიადა და ტურნირი</p>
+            </div>
+            <div class="step_arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="step_card">
+              <div class="step_number">2</div>
+              <div class="step_icon">
+                <i class="fa-solid fa-user-plus"></i>
+              </div>
+              <h4 class="step_title">დარეგისტრირდი</h4>
+              <p class="step_description">მარტივად დარეგისტრირდი შენთვის საინტერესო აქტივობაში</p>
+            </div>
+            <div class="step_arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="step_card">
+              <div class="step_number">3</div>
+              <div class="step_icon">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <h4 class="step_title">მიიღე მონაწილეობა</h4>
+              <p class="step_description">გამოიჩინე თავი და დაამტკიცე შენი უნარები</p>
+            </div>
+            <div class="step_arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="step_card">
+              <div class="step_number">4</div>
+              <div class="step_icon">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <h4 class="step_title">გაამდიდრე შენი პორტფელი</h4>
+              <p class="step_description">მიიღე სერტიფიკატი და დაამატე პორტფოლიოში</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Partner Organizations section -->
+      <section class="partners_section">
+        <div class="partners_container">
+          <h3 class="partners_h3">ჩვენი პარტნიორები</h3>
+          <p class="partners_subtitle">ვთანამშრომლობთ საქართველოს წამყვან სასწავლო დაწესებულებებთან</p>
+          <div class="partners_grid">
+            <div class="partner_card">
+              <div class="partner_logo">
+                <img src="./images/gmuna.jpg" alt="Georgian Model United Nations Association " />
+              </div>
+              <h4 class="partner_name">Georgian Model United Nations Association </h4>
+            </div>
+            <div class="partner_card">
+              <div class="partner_logo">
+                <img src="./images/logosi.jpg" alt="Partner Organization 2" />
+              </div>
+              <h4 class="partner_name">საერთაშორისო აკადემია ლოგოსი • Logos International Academy</h4>
+            </div>
+            <div class="partner_card">
+              <div class="partner_logo">
+                <img src="./images/it-step.png" alt="IT Academy Step Georgia" />
+              </div>
+              <h4 class="partner_name">IT Academy Step Georgia</h4>
+            </div>
+            <div class="partner_card">
+              <div class="partner_logo">
+                <img src="./images/LEAF.jpg" alt="LEAF [Liberal Enhanced Arts Foundation] " />
+              </div>
+              <h4 class="partner_name">LEAF [Liberal Enhanced Arts Foundation] </h4>
+            </div>
+            <div class="partner_card">
+              <div class="partner_logo">
+                <img src="./images/Xtreme.jpg" alt='სამთო-სათხილამურო კლუბი "იქსტრიმი" Xtreme ski-school' />
+              </div>
+              <h4 class="partner_name">სამთო-სათხილამურო კლუბი "იქსტრიმი" Xtreme ski-school</h4>
+            </div>
+            <div class="partner_card">
+              <div class="partner_logo">
+                <img src="./images/GIDE.png" alt="Georgian Institute for Debate and Education • GIDE" />
+              </div>
+              <h4 class="partner_name">Georgian Institute for Debate and Education • GIDE</h4>
+            </div>
+          </div>
+          <div class="partners_stats">
+            <div class="stat_item">
+              <span class="stat_number">50+</span>
+              <span class="stat_label">პარტნიორი ორგანიზაცია</span>
+            </div>
+            <div class="stat_item">
+              <span class="stat_number">100+</span>
+              <span class="stat_label">სასწავლო დაწესებულება</span>
+            </div>
+            <div class="stat_item">
+              <span class="stat_number">1000+</span>
+              <span class="stat_label">წარმატებული სტუდენტი</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter/Stay Updated section -->
+      <section class="newsletter_section">
+        <div class="newsletter_container">
+          <div class="newsletter_content">
+            <div class="newsletter_text">
+              <h3 class="newsletter_h3">მიიღე სიახლეები</h3>
+              <p class="newsletter_description">მიიღე უახლესი ინფორმაცია ახალ აქტივობებზე, ოლიმპიადებზე და სპეციალურ შეთავაზებებზე</p>
+              <div class="newsletter_features">
+                <div class="feature_item">
+                  <i class="fa-solid fa-bell"></i>
+                  <span>შეგატყობინებთ ახალ აქტივობებზე</span>
+                </div>
+                <div class="feature_item">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <span>მოგახსენებთ რეგისტრაციის ვადებს</span>
+                </div>
+                <div class="feature_item">
+                  <i class="fa-solid fa-gift"></i>
+                  <span>სპეციალური შეთავაზებები და ფასდაკლებები</span>
+                </div>
+              </div>
+            </div>
+            <div class="newsletter_form">
+              <div class="form_container">
+                <h4 class="form_title">გამოიწერე ჩვენი ბიულეტენი</h4>
+                <form class="subscribe_form">
+                  <div class="input_group">
+                    <input type="text" placeholder="თქვენი სახელი" class="form_input" required>
+                    <i class="fa-solid fa-user input_icon"></i>
+                  </div>
+                  <div class="input_group">
+                    <input type="email" placeholder="ელ-ფოსტა" class="form_input" required>
+                    <i class="fa-solid fa-envelope input_icon"></i>
+                  </div>
+                  <div class="checkbox_group">
+                    <label class="checkbox_label">
+                      <input type="checkbox" class="form_checkbox" required>
+                      <span class="checkmark"></span>
+                      ვეთანხმები <a href="#" class="terms_link">პირობებს</a> და <a href="#" class="terms_link">კონფიდენციალურობის პოლიტიკას</a>
+                    </label>
+                  </div>
+                  <button type="submit" class="subscribe_btn">
+                    <span>გამოიწერე</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer_container">
+          <div class="footer_main">
+            <div class="footer_brand">
+              <div class="footer_logo">
+                <img src="./images/logo.svg" alt="EduBridge Logo" />
+                <h3 class="footer_logo_text">EduBridge</h3>
+              </div>
+              <p class="footer_description">აღმოაჩინე, მიიღე მონაწილეობა და გამოიჩინე თავი საქართველოს საუკეთესო საგანმანათლებლო აქტივობებში</p>
+              <div class="footer_social">
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-facebook-f"></i>
                 </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
             </div>
-            <div class="header_rightSide">
-                <nav class="nav">
-                    <ul class="nav_ul">
-                        <li><a href="#" class="nav_a">აქტივობები</a></li>
-                        <li><a href="#" class="nav_a">სერტიფიკატები</a></li>
-                        <li><a href="#" class="nav_a">რჩევები</a></li>
-                        <li><a href="#" class="nav_a">კონტაქტი</a></li>
-                    </ul>
-                </nav>
-                <button class="header_btn">ავტორიზაცია</button>
+            <div class="footer_links">
+              <div class="footer_column">
+                <h4 class="footer_column_title">აქტივობები</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">ოლიმპიადები</a></li>
+                  <li><a href="#" class="footer_link">ტურნირები</a></li>
+                  <li><a href="#" class="footer_link">სახელოსნოები</a></li>
+                  <li><a href="#" class="footer_link">კონფერენციები</a></li>
+                  <li><a href="#" class="footer_link">საგანმანათლებლო ლაბორატორიები</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">სერვისები</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">სერტიფიკატები</a></li>
+                  <li><a href="#" class="footer_link">პორტფოლიო</a></li>
+                  <li><a href="#" class="footer_link">რჩევები</a></li>
+                  <li><a href="#" class="footer_link">მენტორობა</a></li>
+                  <li><a href="#" class="footer_link">კარიერული რჩევები</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">ჩვენს შესახებ</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">ჩვენი ისტორია</a></li>
+                  <li><a href="#" class="footer_link">გუნდი</a></li>
+                  <li><a href="#" class="footer_link">პარტნიორები</a></li>
+                  <li><a href="#" class="footer_link">კარიერა</a></li>
+                  <li><a href="#" class="footer_link">პრესა</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">დახმარება</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">FAQ</a></li>
+                  <li><a href="#" class="footer_link">კონტაქტი</a></li>
+                  <li><a href="#" class="footer_link">მხარდაჭერა</a></li>
+                  <li><a href="#" class="footer_link">სახელმძღვანელო</a></li>
+                  <li><a href="#" class="footer_link">შეფასებები</a></li>
+                </ul>
+              </div>
             </div>
-        </header>
-        <!-- after header section-->
-         <section class="hero">
-            <div class="hero_text_div">
-                <h2 class="hero_h2">აღმოაჩინე. <br>მიიღე მონაწილეობა. <br>გამოიჩინე თავი.</h2>
-                <p class="hero_p">იპოვე ოლიმპიადები, ტურნირები და სხვა სასკოლო აქტივობები. განათავსე შენი წარმატებები ერთ პორტფოლიოში.</p>
-                <button class="hero_btn"><img src="./images/arrow.svg" alt="">აქტივობები</button>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_bottom_content">
+              <div class="footer_copyright">
+                <p>&copy; 2024 EduBridge. ყველა უფლება დაცულია.</p>
+              </div>
+              <div class="footer_legal">
+                <a href="#" class="footer_legal_link">პირობები</a>
+                <a href="#" class="footer_legal_link">კონფიდენციალურობა</a>
+                <a href="#" class="footer_legal_link">Cookie პოლიტიკა</a>
+              </div>
             </div>
-            <div class="hero_img_div">
-                <img src="./images/hero_image.jpeg" alt="Hero image">
-            </div>
-         </section>
-         <!-- activity section -->
-          <section class="activity_section">
-            <div class="activity_div">
-                <div class="activity_text_div">
-                    <h3 class="activity_h3">მიმდინარე აქტივობები</h3>
-                    <div class="activity_seeAll">
-                        <img src="./images/arrow.svg" alt="">
-                        <a href="#" class="activity_a">ყველას ნახვა</a>
-                    </div>
-                </div>
-                <div id="activity_div_cards" class="activity_div_cards">
-
-                </div>
-            </div>
-            <div class="students_acticity_div">
-                <h2 class="students_acticity_h2">ბოლო აქტივობები</h2>
-                <article class="students_acticity_card">
-                    <div class="card-content">
-                        <span class="students_activity_name">ლუკა სილაგაძე</span>
-                        <span class="students_activity_text">მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში - <span class="students_activity_achiv">ოქროს მედალი</span></span>
-                    </div>
-                    
-                    <!-- Buttons container -->
-                    <div class="card-buttons">
-                        <button class="card-btn like-btn">
-                            <i class="fa-solid fa-heart"></i>
-                            <span class="like-count">12</span>
-                        </button>
-                        <button class="card-btn comment-btn">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>კომენტარი</span>
-                        </button>
-                    </div>
-                </article>
-                <article class="students_acticity_card">
-                    <div class="card-content">
-                        <span class="students_activity_name">ლუკა სილაგაძე</span>
-                        <span class="students_activity_text">მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში - <span class="students_activity_achiv">ოქროს მედალი</span></span>
-                    </div>
-                    
-                    <!-- Buttons container -->
-                    <div class="card-buttons">
-                        <button class="card-btn like-btn">
-                            <i class="fa-solid fa-heart"></i>
-                            <span class="like-count">12</span>
-                        </button>
-                        <button class="card-btn comment-btn">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>კომენტარი</span>
-                        </button>
-                    </div>
-                </article>
-                <article class="students_acticity_card">
-                    <div class="card-content">
-                        <span class="students_activity_name">ლუკა სილაგაძე</span>
-                        <span class="students_activity_text">მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში - <span class="students_activity_achiv">ოქროს მედალი</span></span>
-                    </div>
-                    
-                    <!-- Buttons container -->
-                    <div class="card-buttons">
-                        <button class="card-btn like-btn">
-                            <i class="fa-solid fa-heart"></i>
-                            <span class="like-count">12</span>
-                        </button>
-                        <button class="card-btn comment-btn">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>კომენტარი</span>
-                        </button>
-                    </div>
-                </article>
-            </div>
-          </section>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
