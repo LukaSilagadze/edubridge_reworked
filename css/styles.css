@@ -3,7 +3,7 @@
 }
 
 .container{
-    width: min(100%, 1440px);
+    width: 100%;
     margin: auto;
 }
 
