@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/alk-life/css/alk-life.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/dc2d1e509b.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <title>Edubridge</title>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo">
+                <a href="./index.html" class="logo">
+                    <img src="./images/logo.svg" alt="logo">
+                    <h1 class="logo_text">EduBridge</h1>
+                </a>
+            </div>
+            <div class="header_rightSide">
+                <nav class="nav">
+                    <ul class="nav_ul">
+                        <li><a href="#" class="nav_a">აქტივობები</a></li>
+                        <li><a href="#" class="nav_a">სერტიფიკატები</a></li>
+                        <li><a href="#" class="nav_a">რჩევები</a></li>
+                        <li><a href="#" class="nav_a">კონტაქტი</a></li>
+                    </ul>
+                </nav>
+                <button class="header_btn">შესვლა</button>
+            </div>
+        </header>
+        <!-- after header section-->
+         <section class="hero">
+            <div class="hero_text_div">
+                <h2 class="hero_h2">აღმოაჩინე. <br>მიიღე მონაწილეობა. <br>გამოიჩინე თავი.</h2>
+                <p class="hero_p">იპოვე ოლიმპიადები, ტურნირები და სხვა სასკოლო აქტივობები. განათავსე შენი წარმატებები ერთ პორტფოლიოში.</p>
+                <button class="hero_btn"><img src="./images/arrow.svg" alt="">აქტივობები</button>
+            </div>
+         </section>
+         <!-- activity section -->
+          <section class="activity_section">
+            <div class="activity_div">
+                <div class="activity_text_div">
+                    <h3 class="activity_h3">მიმდინარე აქტივობები</h3>
+                    <div class="activity_seeAll">
+                        <img src="./images/arrow.svg" alt="">
+                        <a href="#" class="activity_a">ყველას ნახვა</a>
+                    </div>
+                </div>
+                <div id="activity_div_cards" class="activity_div_cards">
+
+                </div>
+            </div>
+            <div class="students_acticity_div">
+                <h2 class="students_acticity_h2">ბოლო აქტივობები</h2>
+                <article class="students_acticity_card">
+                    <div class="card-content">
+                        <span class="students_activity_name">ლუკა სილაგაძე</span>
+                        <span class="students_activity_text">მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში - <span class="students_activity_achiv">ოქროს მედალი</span></span>
+                    </div>
+                    
+                    <!-- Buttons container -->
+                    <div class="card-buttons">
+                        <button class="card-btn like-btn">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="like-count">12</span>
+                        </button>
+                        <button class="card-btn comment-btn">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <span>კომენტარი</span>
+                        </button>
+                    </div>
+                </article>
+                <article class="students_acticity_card">
+                    <div class="card-content">
+                        <span class="students_activity_name">ლუკა სილაგაძე</span>
+                        <span class="students_activity_text">მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში - <span class="students_activity_achiv">ოქროს მედალი</span></span>
+                    </div>
+                    
+                    <!-- Buttons container -->
+                    <div class="card-buttons">
+                        <button class="card-btn like-btn">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="like-count">12</span>
+                        </button>
+                        <button class="card-btn comment-btn">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <span>კომენტარი</span>
+                        </button>
+                    </div>
+                </article>
+                <article class="students_acticity_card">
+                    <div class="card-content">
+                        <span class="students_activity_name">ლუკა სილაგაძე</span>
+                        <span class="students_activity_text">მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში - <span class="students_activity_achiv">ოქროს მედალი</span></span>
+                    </div>
+                    
+                    <!-- Buttons container -->
+                    <div class="card-buttons">
+                        <button class="card-btn like-btn">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="like-count">12</span>
+                        </button>
+                        <button class="card-btn comment-btn">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <span>კომენტარი</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+          </section>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
