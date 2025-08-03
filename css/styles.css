@@ -496,9 +496,6 @@
 /* How It Works Section */
 .how_it_works_section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 80px 50px;
-    position: relative;
-    overflow: hidden;
 }
 
 .how_it_works_section::before {
@@ -514,10 +511,11 @@
 }
 
 .how_it_works_container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 60px;
+    padding: 80px 50px;
 }
 
 .how_it_works_h3 {
@@ -530,7 +528,6 @@
     text-transform: uppercase;
     color: #022762;
     text-align: center;
-    margin-bottom: 60px;
     position: relative;
 }
 
@@ -555,10 +552,11 @@
 
 .steps_container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: scroll;
+    padding-top: 30px;
+    scrollbar-width: none;
 }
 
 .step_card {

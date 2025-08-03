@@ -1,4 +1,25 @@
 /* Responsive Header with Burger Menu */
+@media (max-width: 1024px) {
+    .header{
+        padding: 15px 20px;
+    }
+    .header_rightSide{
+        column-gap: 20px;
+    }
+    .header_btn,
+    .nav_a{
+        font-size: 14px;
+    }
+    .nav_ul{
+        column-gap: 10px;
+    }
+    .nav_a::after{
+        width: 100%;
+    }
+    .header_btn .nav_a::after{
+        width: 100%;
+    }
+}
 @media (max-width: 768px) {
     .header {
         padding: 15px 20px;
@@ -313,27 +334,80 @@
     }
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .steps_container {
-        flex-direction: column;
-        gap: 20px;
+/* Responsive design for how it works section */
+@media (max-width: 1024px) {
+    .how_it_works_section{
+        padding: 0;
     }
-    
-    .step_arrow {
-        transform: rotate(90deg);
-    }
-    
-    .step_card {
-        width: 280px;
-    }
-    
-    .how_it_works_section {
-        padding: 60px 30px;
+    .how_it_works_container {
+        max-width: none;
+        width: 100%;
+        padding: 20px 0 20px 20px;
     }
     
     .how_it_works_h3 {
-        font-size: 32px;
+        font-size: 36px;
+    }
+    
+    /* Horizontal scrollable steps from 1024px */
+    .steps_container {
+        justify-content: flex-start;
+        gap: 20px;
+        scrollbar-width: thin;
+        scrollbar-color: #00E6FB #f0f0f0;
+        column-gap: 5px;
+    }
+    /* .steps_container:last-child{
+        margin-right: 20px;
+    }
+     */
+    .steps_container::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .steps_container::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 3px;
+    }
+    
+    .steps_container::-webkit-scrollbar-thumb {
+        background: #00E6FB;
+        border-radius: 3px;
+    }
+    
+    .step_card {
+        min-width: 220px;
+        flex-shrink: 0;
+        margin: 0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+    
+    .step_arrow {
+        display: flex;
+        align-items: center;
+        color: #00E6FB;
+        font-size: 16px;
+        opacity: 0.7;
+        flex-shrink: 0;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how_it_works_h3 {
+        font-size: 28px;
+    }
+    .step_card {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .how_it_works_h3 {
+        font-size: 24px;
+    }
+    .step_card {
+        min-width: 180px;
     }
 }
 
