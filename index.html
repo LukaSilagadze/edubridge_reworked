@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/resolutions.css" />
     <script
       src="https://kit.fontawesome.com/dc2d1e509b.js"
       crossorigin="anonymous"
@@ -36,9 +37,13 @@
               <li><a href="#" class="nav_a">სერტიფიკატები</a></li>
               <li><a href="#" class="nav_a">რჩევები</a></li>
               <li><a href="#" class="nav_a">კონტაქტი</a></li>
+              <li class="mobile_auth"><button class="header_btn">ავტორიზაცია</button></li>
             </ul>
           </nav>
-          <button class="header_btn">ავტორიზაცია</button>
+          <button class="header_btn desktop_auth">ავტორიზაცია</button>
+          <button class="burger_menu" id="burgerMenu">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
       </header>
       <!-- after header section-->
@@ -69,66 +74,70 @@
               <a href="#" class="activity_a">ყველას ნახვა</a>
             </div>
           </div>
-          <div id="activity_div_cards" class="activity_div_cards"></div>
+          <div id="activity_div_cards" class="activity_div_cards">
+            <!-- javascript will be here -->
+          </div>
         </div>
         <div class="students_acticity_div">
           <h2 class="students_acticity_h2">ბოლო აქტივობები</h2>
-          <article class="students_acticity_card">
-            <div class="card-content">
-              <span class="students_activity_name">ლუკა სილაგაძე</span>
-              <span class="students_activity_text"
-                >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
-                <span class="students_activity_achiv">ოქროს მედალი</span></span>
-            </div>
-            <div class="card-buttons">
-              <button class="card-btn like-btn">
-                <i class="fa-solid fa-heart"></i>
-                <span class="like-count">12</span>
-              </button>
-              <button class="card-btn comment-btn">
-                <i class="fa-solid fa-comment-dots"></i>
-                <span>კომენტარი</span>
-              </button>
-            </div>
-          </article>
-          <article class="students_acticity_card">
-            <div class="card-content">
-              <span class="students_activity_name">ლუკა სილაგაძე</span>
-              <span class="students_activity_text"
-                >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
-                <span class="students_activity_achiv">ოქროს მედალი</span></span
-              >
-            </div>
-            <div class="card-buttons">
-              <button class="card-btn like-btn">
-                <i class="fa-solid fa-heart"></i>
-                <span class="like-count">12</span>
-              </button>
-              <button class="card-btn comment-btn">
-                <i class="fa-solid fa-comment-dots"></i>
-                <span>კომენტარი</span>
-              </button>
-            </div>
-          </article>
-          <article class="students_acticity_card">
-            <div class="card-content">
-              <span class="students_activity_name">ლუკა სილაგაძე</span>
-              <span class="students_activity_text"
-                >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
-                <span class="students_activity_achiv">ოქროს მედალი</span></span
-              >
-            </div>
-            <div class="card-buttons">
-              <button class="card-btn like-btn">
-                <i class="fa-solid fa-heart"></i>
-                <span class="like-count">12</span>
-              </button>
-              <button class="card-btn comment-btn">
-                <i class="fa-solid fa-comment-dots"></i>
-                <span>კომენტარი</span>
-              </button>
-            </div>
-          </article>
+          <div id="students_acticity_div_cards" class="students_acticity_div_cards">
+            <article class="students_acticity_card">
+              <div class="card-content">
+                <span class="students_activity_name">ლუკა სილაგაძე</span>
+                <span class="students_activity_text"
+                  >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
+                  <span class="students_activity_achiv">ოქროს მედალი</span></span>
+              </div>
+              <div class="card-buttons">
+                <button class="card-btn like-btn">
+                  <i class="fa-solid fa-heart"></i>
+                  <span class="like-count">12</span>
+                </button>
+                <button class="card-btn comment-btn">
+                  <i class="fa-solid fa-comment-dots"></i>
+                  <span>კომენტარი</span>
+                </button>
+              </div>
+            </article>
+            <article class="students_acticity_card">
+              <div class="card-content">
+                <span class="students_activity_name">ლუკა სილაგაძე</span>
+                <span class="students_activity_text"
+                  >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
+                  <span class="students_activity_achiv">ოქროს მედალი</span></span
+                >
+              </div>
+              <div class="card-buttons">
+                <button class="card-btn like-btn">
+                  <i class="fa-solid fa-heart"></i>
+                  <span class="like-count">12</span>
+                </button>
+                <button class="card-btn comment-btn">
+                  <i class="fa-solid fa-comment-dots"></i>
+                  <span>კომენტარი</span>
+                </button>
+              </div>
+            </article>
+            <article class="students_acticity_card">
+              <div class="card-content">
+                <span class="students_activity_name">ლუკა სილაგაძე</span>
+                <span class="students_activity_text"
+                  >მიიღო სერტიფიკატი მათემატიკის რესპუბლიკური ოლიმპიადაში -
+                  <span class="students_activity_achiv">ოქროს მედალი</span></span
+                >
+              </div>
+              <div class="card-buttons">
+                <button class="card-btn like-btn">
+                  <i class="fa-solid fa-heart"></i>
+                  <span class="like-count">12</span>
+                </button>
+                <button class="card-btn comment-btn">
+                  <i class="fa-solid fa-comment-dots"></i>
+                  <span>კომენტარი</span>
+                </button>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
       <!-- How It Works section -->

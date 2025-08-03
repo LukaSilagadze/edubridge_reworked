@@ -1,0 +1,542 @@
+/* Responsive Header with Burger Menu */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        position: relative;
+    }
+    
+    .header_rightSide {
+        position: relative;
+    }
+    
+    .nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #022762;
+        width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .nav.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .nav_ul {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    .nav_ul li {
+        width: 100%;
+    }
+    
+    .nav_a {
+        display: block;
+        padding: 15px 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 14px;
+    }
+    
+    .nav_a:hover::after {
+        display: none;
+    }
+    
+    .nav_a:hover {
+        background-color: rgba(0, 230, 251, 0.1);
+        color: #00E6FB;
+    }
+    
+    .mobile_auth {
+        padding: 15px 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile_auth .header_btn {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .desktop_auth {
+        display: none;
+    }
+    
+    .burger_menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-size: 30px;
+        margin-left: 15px;
+        transition: color 0.3s ease;
+    }
+    
+    .burger_menu:hover {
+        color: #00E6FB;
+    }
+    
+    .burger_menu.active i {
+        transform: rotate(180deg);
+    }
+}
+
+/* Hide burger menu on larger screens */
+@media (min-width: 769px) {
+    .burger_menu {
+        display: none;
+    }
+    
+    .mobile_auth {
+        display: none;
+    }
+}
+
+/* Responsive design for hero section */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 60px 20px;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero_text_div {
+        order: 1;
+        align-items: center;
+    }
+    
+    .hero_img_div {
+        order: 2;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .hero_h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .hero_p {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+    
+    .hero_btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive design for activity section */
+@media (max-width: 1024px) {
+    .activity_section {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 20px;
+    }
+    
+    .activity_div {
+        width: 100%;
+    }
+    
+    .activity_h3 {
+        font-size: 36px;
+    }
+    
+    .activity_a {
+        font-size: 14px;
+    }
+    
+    .students_acticity_div {
+        width: 100%;
+        flex-direction: column;
+        row-gap: 12px;
+        margin-top: 0;
+        padding-left: 0;
+        border-left: none;
+    }
+    
+    .students_acticity_h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    /* Horizontal scrollable student activities from 1024px */
+    .students_acticity_div_cards {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        scrollbar-width: thin;
+        scrollbar-color: #00E6FB #f0f0f0;
+    }
+    
+    .students_acticity_div_cards::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .students_acticity_div_cards::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 3px;
+    }
+    
+    .students_acticity_div_cards::-webkit-scrollbar-thumb {
+        background: #00E6FB;
+        border-radius: 3px;
+    }
+    
+    .students_acticity_card {
+        min-width: 280px;
+        flex-shrink: 0;
+        margin: 0;
+    }
+    
+    /* Horizontal scrollable event activities from 1024px */
+    .activity_div_cards {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        scrollbar-width: thin;
+        scrollbar-color: #00E6FB #f0f0f0;
+    }
+    
+    .activity_div_cards::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .activity_div_cards::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 3px;
+    }
+    
+    .activity_div_cards::-webkit-scrollbar-thumb {
+        background: #00E6FB;
+        border-radius: 3px;
+    }
+    
+    .activity_card {
+        min-width: 300px;
+        flex-shrink: 0;
+        margin: 0;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .activity_section {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    
+    .activity_h3 {
+        font-size: 28px;
+    }
+    
+    .activity_a {
+        font-size: 12px;
+    }
+    
+    .activity-title {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    
+    .activity-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .activity-meta-item {
+        font-size: 12px;
+    }
+    
+    .activity-actions {
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .activity-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity_h3 {
+        font-size: 24px;
+    }
+    
+    .activity_a {
+        font-size: 11px;
+    }
+    
+    .activity-title {
+        font-size: 13px;
+    }
+    
+    .activity-meta-item {
+        font-size: 11px;
+    }
+    
+    .activity-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .activity_card {
+        min-width: 280px;
+    }
+    
+    .students_acticity_card {
+        min-width: 250px;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .steps_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .step_arrow {
+        transform: rotate(90deg);
+    }
+    
+    .step_card {
+        width: 280px;
+    }
+    
+    .how_it_works_section {
+        padding: 60px 30px;
+    }
+    
+    .how_it_works_h3 {
+        font-size: 32px;
+    }
+}
+
+/* Responsive design for partners section */
+@media (max-width: 768px) {
+    .partners_section {
+        padding: 60px 30px;
+    }
+    
+    .partners_h3 {
+        font-size: 32px;
+    }
+    
+    .partners_subtitle {
+        font-size: 16px;
+    }
+    
+    .partners_grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .partners_stats {
+        gap: 40px;
+    }
+    
+    .stat_number {
+        font-size: 28px;
+    }
+    
+    .stat_label {
+        font-size: 12px;
+    }
+}
+/* Responsive design for newsletter section */
+@media (max-width: 1024px) {
+    .newsletter_section {
+        padding: 60px 30px;
+    }
+    
+    .newsletter_content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .newsletter_h3 {
+        font-size: 36px;
+    }
+    
+    .newsletter_description {
+        font-size: 16px;
+    }
+    
+    .newsletter_form {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter_section {
+        padding: 50px 20px;
+    }
+    
+    .newsletter_content {
+        gap: 30px;
+    }
+    
+    .newsletter_h3 {
+        font-size: 28px;
+    }
+    
+    .newsletter_description {
+        font-size: 14px;
+    }
+    
+    .newsletter_features {
+        gap: 12px;
+    }
+    
+    .feature_item {
+        gap: 10px;
+    }
+    
+    .feature_item span {
+        font-size: 13px;
+    }
+    
+    .newsletter_form {
+        padding: 25px 20px;
+    }
+    
+    .form_title {
+        font-size: 18px;
+    }
+    
+    .form_input {
+        padding: 12px 40px 12px 15px;
+        font-size: 13px;
+    }
+    
+    .subscribe_btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .social_icons {
+        gap: 15px;
+    }
+    
+    .social_icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter_section {
+        padding: 40px 15px;
+    }
+    
+    .newsletter_h3 {
+        font-size: 24px;
+    }
+    
+    .newsletter_description {
+        font-size: 13px;
+    }
+    
+    .newsletter_features {
+        gap: 10px;
+    }
+    
+    .feature_item span {
+        font-size: 12px;
+    }
+    
+    .newsletter_form {
+        padding: 20px 15px;
+    }
+    
+    .form_title {
+        font-size: 16px;
+    }
+    
+    .form_input {
+        padding: 10px 35px 10px 12px;
+        font-size: 12px;
+    }
+    
+    .subscribe_btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .social_icons {
+        gap: 12px;
+    }
+    
+    .social_icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social_icon i {
+        font-size: 16px;
+    }
+}
+/* Responsive Design for Footer */
+@media (max-width: 1024px) {
+    .footer_main {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .footer_links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 30px 0;
+    }
+    .footer_main {
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    .footer_links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer_bottom_content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer_legal {
+        gap: 16px;
+    }
+    .footer_social {
+        justify-content: center;
+    }
+    .footer_brand {
+        text-align: center;
+    }
+}

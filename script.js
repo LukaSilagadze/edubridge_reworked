@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Burger Menu Functionality
+    const burgerMenu = document.getElementById('burgerMenu');
+    const nav = document.querySelector('.nav');
+    
+    burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!burgerMenu.contains(event.target) && !nav.contains(event.target)) {
+            burgerMenu.classList.remove('active');
+            nav.classList.remove('active');
+        }
+    });
+    
+    // Close menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav_a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
+
     const activityCards = [
         {
             id: 1,
@@ -33,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     activityCards.forEach((activity) => {
         const card = document.createElement("article");
-        card.className = "activity_card"; // Changed from "card" to match your CSS
+        card.className = "activity_card";
         card.innerHTML = `
             <div class="activity-image">
                 <img src="./images/${activity.image}" alt="${activity.title}" loading="lazy">
