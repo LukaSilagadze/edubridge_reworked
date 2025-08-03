@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/node_modules/alk-life/css/alk-life.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Georgian:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/resolutions.css" />
+    <link rel="stylesheet" href="./css/events.css" />
+    <script
+      src="https://kit.fontawesome.com/dc2d1e509b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+    <title>აქტივობები - EduBridge</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header class="header">
+        <div class="logo">
+          <a href="./index.html" class="logo">
+            <img src="./images/logo.svg" alt="logo" />
+            <h1 class="logo_text">EduBridge</h1>
+          </a>
+        </div>
+        <div class="header_rightSide">
+          <nav class="nav">
+            <ul class="nav_ul">
+              <li><a href="./index.html" class="nav_a">მთავარი</a></li>
+              <li><a href="./events.html" class="nav_a active">აქტივობები</a></li>
+              <li><a href="#" class="nav_a">რჩევები</a></li>
+              <li><a href="#" class="nav_a">კონტაქტი</a></li>
+              <li class="mobile_auth"><button class="header_btn">ავტორიზაცია</button></li>
+            </ul>
+          </nav>
+          <button class="header_btn desktop_auth">ავტორიზაცია</button>
+          <button class="burger_menu" id="burgerMenu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="events_hero">
+        <div class="events_hero_content">
+          <h2 class="events_hero_h2">აღმოაჩინე შენი შემდეგი აქტივობა</h2>
+          <p class="events_hero_p">
+            იპოვე ასობით სასკოლო აქტივობა, ოლიმპიადა და ტურნირი. 
+            აირჩიე შენთვის შესაფერისი და დაიწყე შენი გზა წარმატებისკენ.
+          </p>
+          <div class="events_search">
+            <div class="search_container">
+              <i class="fas fa-search search_icon"></i>
+              <input type="text" placeholder="ძიება აქტივობებში..." class="search_input" id="searchInput">
+              <button class="search_btn">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="events_hero_stats">
+          <div class="stat_item">
+            <span class="stat_number">500+</span>
+            <span class="stat_label">აქტივობა</span>
+          </div>
+          <div class="stat_item">
+            <span class="stat_number">50+</span>
+            <span class="stat_label">ორგანიზაცია</span>
+          </div>
+          <div class="stat_item">
+            <span class="stat_number">10K+</span>
+            <span class="stat_label">მონაწილე</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Tabs -->
+      <section class="category_section">
+        <div class="category_container">
+          <div class="category_tabs" id="categoryTabs">
+            <button class="category_tab active" data-category="all">
+              <i class="fas fa-th-large"></i>
+              <span>ყველა</span>
+            </button>
+            <button class="category_tab" data-category="olympiads">
+              <i class="fas fa-trophy"></i>
+              <span>ოლიმპიადები</span>
+            </button>
+            <button class="category_tab" data-category="tournaments">
+              <i class="fas fa-medal"></i>
+              <span>ტურნირები</span>
+            </button>
+            <!-- <button class="category_tab" data-category="workshops">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <span>სახელოსნოები</span>
+            </button> -->
+            <button class="category_tab" data-category="conferences">
+              <i class="fas fa-users"></i>
+              <span>კონფერენციები</span>
+            </button>
+            <button class="category_tab" data-category="charity">
+              <i class="fas fa-heart"></i>
+              <span>ქველმოქმედება</span>
+            </button>
+            <button class="category_tab" data-category="labs">
+              <i class="fas fa-flask"></i>
+              <span>ლაბორატორიები</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filters Section -->
+      <section class="filters_section">
+        <div class="filters_container">
+          <div class="filters_row">
+            <div class="filter_group">
+              <label class="filter_label">საგანი</label>
+              <select class="filter_select" id="subjectFilter">
+                <option value="">ყველა საგანი</option>
+                <option value="math">მათემატიკა</option>
+                <option value="science">მეცნიერება</option>
+                <option value="literature">ლიტერატურა</option>
+                <option value="history">ისტორია</option>
+                <option value="geography">გეოგრაფია</option>
+                <option value="languages">ენები</option>
+                <option value="arts">ხელოვნება</option>
+                <option value="technology">ტექნოლოგია</option>
+              </select>
+            </div>
+            <div class="filter_group">
+              <label class="filter_label">კლასი</label>
+              <select class="filter_select" id="gradeFilter">
+                <option value="">ყველა კლასი</option>
+                <option value="elementary">დაწყებითი</option>
+                <option value="middle">საშუალო</option>
+                <option value="high">საშუალო სრული</option>
+              </select>
+            </div>
+            <div class="filter_group">
+              <label class="filter_label">მდებარეობა</label>
+              <select class="filter_select" id="locationFilter">
+                <option value="">ყველა ფორმატი</option>
+                <option value="online">ონლაინ</option>
+                <option value="offline">ფიზიკური</option>
+                <option value="hybrid">ჰიბრიდული</option>
+              </select>
+            </div>
+            <div class="filter_group">
+              <label class="filter_label">თარიღი</label>
+              <select class="filter_select" id="dateFilter">
+                <option value="">ყველა თარიღი</option>
+                <option value="this-week">ამ კვირას</option>
+                <option value="this-month">ამ თვეს</option>
+                <option value="next-month">შემდეგ თვეს</option>
+                <option value="next-quarter">შემდეგ კვარტალში</option>
+              </select>
+            </div>
+          </div>
+          <div class="filters_actions">
+            <button class="clear_filters_btn" id="clearFilters">
+              <i class="fas fa-times"></i>
+              ფილტრების გასუფთავება
+            </button>
+            <div class="active_filters" id="activeFilters">
+              <!-- Active filters will be displayed here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events Grid -->
+      <section class="events_section">
+        <div class="events_container">
+          <div class="events_header">
+            <div class="events_count">
+              <span id="eventsCount">0</span> აქტივობა ნაპოვნია
+            </div>
+            <div class="events_sort">
+              <label class="sort_label">დალაგება:</label>
+              <select class="sort_select" id="sortSelect">
+                <option value="date">თარიღით</option>
+                <option value="name">სახელით</option>
+                <option value="popularity">პოპულარობით</option>
+                <option value="deadline">რეგისტრაციის ვადით</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="events_grid" id="eventsGrid">
+            <!-- Events will be dynamically loaded here -->
+          </div>
+
+          <!-- Loading State -->
+          <div class="loading_state" id="loadingState">
+            <div class="loading_spinner"></div>
+            <p>იტვირთება...</p>
+          </div>
+
+          <!-- No Results State -->
+          <div class="no_results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>არ არის ნაპოვნი აქტივობები</h3>
+            <p>სცადეთ სხვა ფილტრები ან ძიების ტერმინები</p>
+            <button class="reset_search_btn" id="resetSearch">
+              <i class="fas fa-refresh"></i>
+              ძიების გასუფთავება
+            </button>
+          </div>
+
+          <!-- Load More Button -->
+          <div class="load_more_container" id="loadMoreContainer" style="display: none;">
+            <button class="load_more_btn" id="loadMoreBtn">
+              <i class="fas fa-plus"></i>
+              მეტის ნახვა
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Events Section -->
+      <section class="featured_section">
+        <div class="featured_container">
+          <h3 class="featured_h3">პოპულარული აქტივობები</h3>
+          <div class="featured_grid" id="featuredGrid">
+            <!-- Featured events will be loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="newsletter_section">
+        <div class="newsletter_container">
+          <div class="newsletter_content">
+            <div class="newsletter_text">
+              <h3 class="newsletter_h3">არ გამოგრჩეს ახალი აქტივობები</h3>
+              <p class="newsletter_description">გამოიწერე ჩვენი ბიულეტენი და მიიღე უახლესი ინფორმაცია ახალ აქტივობებზე</p>
+              <div class="newsletter_features">
+                <div class="feature_item">
+                  <i class="fa-solid fa-bell"></i>
+                  <span>შეგატყობინებთ ახალ აქტივობებზე</span>
+                </div>
+                <div class="feature_item">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <span>მოგახსენებთ რეგისტრაციის ვადებს</span>
+                </div>
+                <div class="feature_item">
+                  <i class="fa-solid fa-gift"></i>
+                  <span>სპეციალური შეთავაზებები და ფასდაკლებები</span>
+                </div>
+              </div>
+            </div>
+            <div class="newsletter_form">
+              <div class="form_container">
+                <h4 class="form_title">გამოიწერე ჩვენი ბიულეტენი</h4>
+                <form class="subscribe_form">
+                  <div class="input_group">
+                    <input type="text" placeholder="თქვენი სახელი" class="form_input" required>
+                    <i class="fa-solid fa-user input_icon"></i>
+                  </div>
+                  <div class="input_group">
+                    <input type="email" placeholder="ელ-ფოსტა" class="form_input" required>
+                    <i class="fa-solid fa-envelope input_icon"></i>
+                  </div>
+                  <div class="checkbox_group">
+                    <label class="checkbox_label">
+                      <input type="checkbox" class="form_checkbox" required>
+                      <span class="checkmark"></span>
+                      ვეთანხმები <a href="#" class="terms_link">პირობებს</a> და <a href="#" class="terms_link">კონფიდენციალურობის პოლიტიკას</a>
+                    </label>
+                  </div>
+                  <button type="submit" class="subscribe_btn">
+                    <span>გამოიწერე</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer_container">
+          <div class="footer_main">
+            <div class="footer_brand">
+              <div class="footer_logo">
+                <img src="./images/logo.svg" alt="EduBridge Logo" />
+                <h3 class="footer_logo_text">EduBridge</h3>
+              </div>
+              <p class="footer_description">აღმოაჩინე, მიიღე მონაწილეობა და გამოიჩინე თავი საქართველოს საუკეთესო საგანმანათლებლო აქტივობებში</p>
+              <div class="footer_social">
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <div class="footer_links">
+              <div class="footer_column">
+                <h4 class="footer_column_title">აქტივობები</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">ოლიმპიადები</a></li>
+                  <li><a href="#" class="footer_link">ტურნირები</a></li>
+                  <li><a href="#" class="footer_link">სახელოსნოები</a></li>
+                  <li><a href="#" class="footer_link">კონფერენციები</a></li>
+                  <li><a href="#" class="footer_link">საგანმანათლებლო ლაბორატორიები</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">სერვისები</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">სერტიფიკატები</a></li>
+                  <li><a href="#" class="footer_link">პორტფოლიო</a></li>
+                  <li><a href="#" class="footer_link">რჩევები</a></li>
+                  <li><a href="#" class="footer_link">მენტორობა</a></li>
+                  <li><a href="#" class="footer_link">კარიერული რჩევები</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">ჩვენს შესახებ</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">ჩვენი ისტორია</a></li>
+                  <li><a href="#" class="footer_link">გუნდი</a></li>
+                  <li><a href="#" class="footer_link">პარტნიორები</a></li>
+                  <li><a href="#" class="footer_link">კარიერა</a></li>
+                  <li><a href="#" class="footer_link">პრესა</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">დახმარება</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">FAQ</a></li>
+                  <li><a href="#" class="footer_link">კონტაქტი</a></li>
+                  <li><a href="#" class="footer_link">მხარდაჭერა</a></li>
+                  <li><a href="#" class="footer_link">სახელმძღვანელო</a></li>
+                  <li><a href="#" class="footer_link">შეფასებები</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_bottom_content">
+              <div class="footer_copyright">
+                <p>&copy; 2024 EduBridge. ყველა უფლება დაცულია.</p>
+              </div>
+              <div class="footer_legal">
+                <a href="#" class="footer_legal_link">პირობები</a>
+                <a href="#" class="footer_legal_link">კონფიდენციალურობა</a>
+                <a href="#" class="footer_legal_link">Cookie პოლიტიკა</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Event Modal -->
+    <div class="event_modal" id="eventModal">
+      <div class="modal_overlay" id="modalOverlay"></div>
+      <div class="modal_content">
+        <button class="modal_close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal_body" id="modalBody">
+          <!-- Modal content will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./events.js"></script>
+  </body>
+</html> 
