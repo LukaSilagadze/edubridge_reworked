@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/node_modules/alk-life/css/alk-life.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Georgian:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/resolutions.css" />
+    <link rel="stylesheet" href="./css/calendar.css" />
+    <script
+      src="https://kit.fontawesome.com/dc2d1e509b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+    <title>კალენდარი - EduBridge</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header class="header">
+        <div class="logo">
+          <a href="./index.html" class="logo">
+            <img src="./images/logo.svg" alt="logo" />
+            <h1 class="logo_text">EduBridge</h1>
+          </a>
+        </div>
+        <div class="header_rightSide">
+          <nav class="nav">
+            <ul class="nav_ul">
+              <li><a href="./index.html" class="nav_a">მთავარი</a></li>
+              <li><a href="./events.html" class="nav_a">აქტივობები</a></li>
+              <li><a href="./calendar.html" class="nav_a active">კალენდარი</a></li>
+              <li><a href="./tips.html" class="nav_a">რჩევები</a></li>
+              <li><a href="./contact.html" class="nav_a">კონტაქტი</a></li>
+              <li class="mobile_auth"><button class="header_btn">ავტორიზაცია</button></li>
+            </ul>
+          </nav>
+          <button class="header_btn desktop_auth">ავტორიზაცია</button>
+          <button class="burger_menu" id="burgerMenu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="calendar_hero">
+        <div class="calendar_hero_content">
+          <h2 class="calendar_hero_h2">თქვენი საგანმანათლებლო კალენდარი</h2>
+          <p class="calendar_hero_p">
+            თვალი ადევნეთ ყველა მნიშვნელოვან აქტივობას, ვადას და მოვლენას. 
+            არ გამოგრჩეთ არანაირი შესაძლებლობა!
+          </p>
+          <div class="calendar_quick_actions">
+            <button class="quick_action_btn primary">
+              <i class="fas fa-plus"></i>
+              <span>ახალი აქტივობა</span>
+            </button>
+            <button class="quick_action_btn secondary">
+              <i class="fas fa-bell"></i>
+              <span>შეგახსენებთ</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendar Main Section -->
+      <section class="calendar_main">
+        <div class="calendar_container">
+          <!-- Calendar Navigation -->
+          <div class="calendar_navigation">
+            <div class="calendar_nav_left">
+              <button class="nav_btn" id="prevMonth">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <h3 class="current_month" id="currentMonth">დეკემბერი 2024</h3>
+              <button class="nav_btn" id="nextMonth">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="calendar_nav_right">
+              <button class="view_btn active" data-view="month">
+                <i class="fas fa-calendar-alt"></i>
+                <span>თვე</span>
+              </button>
+              <button class="view_btn" data-view="week">
+                <i class="fas fa-calendar-week"></i>
+                <span>კვირა</span>
+              </button>
+              <button class="view_btn" data-view="day">
+                <i class="fas fa-calendar-day"></i>
+                <span>დღე</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Calendar Grid -->
+          <div class="calendar_grid">
+            <div class="calendar_weekdays">
+              <div class="weekday">ორშ</div>
+              <div class="weekday">სამ</div>
+              <div class="weekday">ოთხ</div>
+              <div class="weekday">ხუთ</div>
+              <div class="weekday">პარ</div>
+              <div class="weekday">შაბ</div>
+              <div class="weekday">კვი</div>
+            </div>
+            <div class="calendar_days" id="calendarDays">
+              <!-- Calendar days will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Events Sidebar -->
+        <div class="events_sidebar">
+          <div class="sidebar_header">
+            <h3 class="sidebar_title">დღის აქტივობები</h3>
+            <span class="selected_date" id="selectedDate">დეკემბერი 15</span>
+          </div>
+          
+          <div class="events_list" id="eventsList">
+            <!-- Sample events -->
+            <div class="event_item olympiad">
+              <div class="event_time">09:00</div>
+              <div class="event_content">
+                <h4 class="event_title">მათემატიკის რესპუბლიკური ოლიმპიადა</h4>
+                <p class="event_location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  თბილისის სახელმწიფო უნივერსიტეტი
+                </p>
+                <div class="event_meta">
+                  <span class="event_type olympiad">ოლიმპიადა</span>
+                  <span class="event_status registered">დარეგისტრირებული</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="event_item workshop">
+              <div class="event_time">14:30</div>
+              <div class="event_content">
+                <h4 class="event_title">პროგრამირების სახელოსნო</h4>
+                <p class="event_location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  IT Academy Step Georgia
+                </p>
+                <div class="event_meta">
+                  <span class="event_type workshop">სახელოსნო</span>
+                  <span class="event_status pending">მოლოდინში</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="event_item tournament">
+              <div class="event_time">16:00</div>
+              <div class="event_content">
+                <h4 class="event_title">დებატების ტურნირი</h4>
+                <p class="event_location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  GIDE ცენტრი
+                </p>
+                <div class="event_meta">
+                  <span class="event_type tournament">ტურნირი</span>
+                  <span class="event_status open">ღია რეგისტრაცია</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Event Button -->
+          <button class="add_event_btn">
+            <i class="fas fa-plus"></i>
+            <span>ახალი აქტივობის დამატება</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Upcoming Events Section -->
+      <section class="upcoming_events_section">
+        <div class="upcoming_container">
+          <div class="upcoming_header">
+            <h3 class="upcoming_h3">მომავალი აქტივობები</h3>
+            <div class="upcoming_filters">
+              <button class="filter_btn active" data-filter="all">ყველა</button>
+              <button class="filter_btn" data-filter="olympiads">ოლიმპიადები</button>
+              <button class="filter_btn" data-filter="workshops">სახელოსნოები</button>
+              <button class="filter_btn" data-filter="tournaments">ტურნირები</button>
+            </div>
+          </div>
+          
+          <div class="upcoming_grid" id="upcomingGrid">
+            <!-- Sample upcoming events -->
+            <div class="upcoming_card olympiad">
+              <div class="upcoming_date">
+                <span class="date_day">20</span>
+                <span class="date_month">დეკ</span>
+              </div>
+              <div class="upcoming_content">
+                <h4 class="upcoming_title">ფიზიკის საერთაშორისო ოლიმპიადა</h4>
+                <p class="upcoming_description">
+                  მიიღე მონაწილეობა საერთაშორისო დონის ოლიმპიადაში
+                </p>
+                <div class="upcoming_meta">
+                  <span class="upcoming_location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    ბათუმი
+                  </span>
+                  <span class="upcoming_deadline">
+                    <i class="fas fa-clock"></i>
+                    რეგისტრაცია: 18 დეკ
+                  </span>
+                </div>
+                <button class="upcoming_btn">დეტალები</button>
+              </div>
+            </div>
+
+            <div class="upcoming_card workshop">
+              <div class="upcoming_date">
+                <span class="date_day">22</span>
+                <span class="date_month">დეკ</span>
+              </div>
+              <div class="upcoming_content">
+                <h4 class="upcoming_title">AI და მანქანური სწავლება</h4>
+                <p class="upcoming_description">
+                  შეისწავლე ხელოვნური ინტელექტის საფუძვლები
+                </p>
+                <div class="upcoming_meta">
+                  <span class="upcoming_location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    ონლაინ
+                  </span>
+                  <span class="upcoming_deadline">
+                    <i class="fas fa-clock"></i>
+                    რეგისტრაცია: 20 დეკ
+                  </span>
+                </div>
+                <button class="upcoming_btn">დეტალები</button>
+              </div>
+            </div>
+
+            <div class="upcoming_card tournament">
+              <div class="upcoming_date">
+                <span class="date_day">25</span>
+                <span class="date_month">დეკ</span>
+              </div>
+              <div class="upcoming_content">
+                <h4 class="upcoming_title">ქიმიის ტურნირი</h4>
+                <p class="upcoming_description">
+                  გამოიჩინე თავი ქიმიის სფეროში
+                </p>
+                <div class="upcoming_meta">
+                  <span class="upcoming_location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    თბილისი
+                  </span>
+                  <span class="upcoming_deadline">
+                    <i class="fas fa-clock"></i>
+                    რეგისტრაცია: 23 დეკ
+                  </span>
+                </div>
+                <button class="upcoming_btn">დეტალები</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer_container">
+          <div class="footer_main">
+            <div class="footer_brand">
+              <div class="footer_logo">
+                <img src="./images/logo.svg" alt="EduBridge Logo" />
+                <h3 class="footer_logo_text">EduBridge</h3>
+              </div>
+              <p class="footer_description">აღმოაჩინე, მიიღე მონაწილეობა და გამოიჩინე თავი საქართველოს საუკეთესო საგანმანათლებლო აქტივობებში</p>
+              <div class="footer_social">
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#" class="footer_social_link">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <div class="footer_links">
+              <div class="footer_column">
+                <h4 class="footer_column_title">აქტივობები</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">ოლიმპიადები</a></li>
+                  <li><a href="#" class="footer_link">ტურნირები</a></li>
+                  <li><a href="#" class="footer_link">სახელოსნოები</a></li>
+                  <li><a href="#" class="footer_link">კონფერენციები</a></li>
+                  <li><a href="#" class="footer_link">საგანმანათლებლო ლაბორატორიები</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">სერვისები</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">სერტიფიკატები</a></li>
+                  <li><a href="#" class="footer_link">პორტფოლიო</a></li>
+                  <li><a href="#" class="footer_link">რჩევები</a></li>
+                  <li><a href="#" class="footer_link">მენტორობა</a></li>
+                  <li><a href="#" class="footer_link">კარიერული რჩევები</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">ჩვენს შესახებ</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">ჩვენი ისტორია</a></li>
+                  <li><a href="#" class="footer_link">გუნდი</a></li>
+                  <li><a href="#" class="footer_link">პარტნიორები</a></li>
+                  <li><a href="#" class="footer_link">კარიერა</a></li>
+                  <li><a href="#" class="footer_link">პრესა</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h4 class="footer_column_title">დახმარება</h4>
+                <ul class="footer_links_list">
+                  <li><a href="#" class="footer_link">FAQ</a></li>
+                  <li><a href="#" class="footer_link">კონტაქტი</a></li>
+                  <li><a href="#" class="footer_link">მხარდაჭერა</a></li>
+                  <li><a href="#" class="footer_link">სახელმძღვანელო</a></li>
+                  <li><a href="#" class="footer_link">შეფასებები</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_bottom_content">
+              <div class="footer_copyright">
+                <p>&copy; 2024 EduBridge. ყველა უფლება დაცულია.</p>
+              </div>
+              <div class="footer_legal">
+                <a href="#" class="footer_legal_link">პირობები</a>
+                <a href="#" class="footer_legal_link">კონფიდენციალურობა</a>
+                <a href="#" class="footer_legal_link">Cookie პოლიტიკა</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./calendar.js"></script>
+  </body>
+</html> 
