@@ -405,6 +405,8 @@
   border: 1px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .event_card:hover {
@@ -443,8 +445,35 @@
   box-shadow: 0 2px 8px rgba(0, 230, 251, 0.3);
 }
 
+.event_organizer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 12px;
+}
+
+.organizer_logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00E6FB;
+}
+
+.organizer_name {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
 .event_content {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .event_title {
@@ -497,6 +526,7 @@
   align-items: center;
   padding-top: 20px;
   border-top: 1px solid #e8e8e8;
+  margin-top: auto;
 }
 
 .event_status {
@@ -1023,5 +1053,35 @@
     font-size: 10px;
     top: 8px;
     right: 8px;
+  }
+
+  .event_organizer {
+    gap: 4px;
+    margin-right: 8px;
+  }
+
+  .organizer_logo {
+    width: 16px;
+    height: 16px;
+  }
+
+  .organizer_name {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event_organizer {
+    gap: 5px;
+    margin-right: 10px;
+  }
+
+  .organizer_logo {
+    width: 18px;
+    height: 18px;
+  }
+
+  .organizer_name {
+    font-size: 10px;
   }
 } 

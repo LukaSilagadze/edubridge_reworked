@@ -4,227 +4,165 @@
 const eventsData = [
   {
     id: 1,
-    title: "მათემატიკის რესპუბლიკური ოლიმპიადა",
-    category: "olympiads",
-    subject: "math",
-    grade: "high",
-    location: "offline",
-    date: "2024-03-15",
-    description: "წარმოადგენს საქართველოს მათემატიკის საუკეთესო სტუდენტების შეჯიბრს.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
+    title: "ნიუ იორკის საერთაშორისო გაეროს მოდელირება",
+    category: "mun",
+    subject: "debate",
+    age: "13-24",
+    location: "ნიუ იორკი, აშშ",
+    date: "2025-10-15",
+    description: "ნიუ იორკის საერთაშორისო გაეროს მოდელირება",
+    image: "./images/munnyc2025.png",
+    status: "closed",
     participants: 150,
-    maxParticipants: 200
+    maxParticipants: 200,
+    organizer: {
+      name: "Gmuna",
+      logo: "./images/gmuna.jpg"
+    }
   },
   {
     id: 2,
-    title: "ფიზიკის საერთაშორისო ტურნირი",
-    category: "tournaments",
-    subject: "science",
-    grade: "high",
-    location: "online",
-    date: "2024-04-20",
-    description: "ონლაინ ფიზიკის ტურნირი, რომელიც აერთიანებს სტუდენტებს მთელი მსოფლიოდან.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
+    title: "ისტორიული კრიზისების კომიტეტის სიმულაცია",
+    category: "mun",
+    subject: "debate",
+    age: "14-25",
+    location: "თილისი, საქართველო",
+    date: "12-16 აგვისტო",
+    description: "ისტორიული კრიზისების კომიტეტის სიმულაცია",
+    image: "./images/HccSimulation2025.png",
+    status: "closed",
     participants: 80,
-    maxParticipants: 100
+    maxParticipants: 100,
+    organizer: {
+      name: "Gmuna",
+      logo: "./images/gmuna.jpg"
+    }
   },
   {
     id: 3,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
+    title: "SDG საზაფხულო ბანაკი ბაკურიანში",
+    category: "camp",
+    subject: "SDG",
+    age: "14-25",
+    location: "ბაკურიანი, საქართველო",
+    date: "12-16 აგვისტო",
+    description: "SDG საზაფხულო ბანაკი ბაკურიანში",
+    image: "./images/SDGCampBakuriani.png",
+    status: "closed",
     participants: 25,
-    maxParticipants: 30
+    maxParticipants: 30,
+    organizer: {
+      name: "Gmuna",
+      logo: "./images/gmuna.jpg"
+    }
   },
   {
     id: 4,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
+    title: "ლოგოსის საზაფხულო სკოლა ლისზე",
+    category: "camp",
+    subject: "საზაფხულო სკოლა",
+    age: "5-12 წლამდე",
+    location: "თბილისი, საქართველო",
+    date: "12-16 აგვისტო",
+    description: "ლოგოსის საზაფხულო სკოლა ლისზე",
+    image: "./images/gardening.png",
     status: "open",
     participants: 25,
-    maxParticipants: 30
+    maxParticipants: 30,
+    organizer: {
+      name: "ლოგოსი",
+      logo: "./images/logosi.jpg"
+    }
   },
   {
     id: 5,
-    title: "პროგრამირების სახელოსნო",
+    title: "ახალგაზრდობის ხმა",
     category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
+    subject: "დებატები",
+    age: "14-29",
+    location: "თბილისი, საქართველო",
+    date: "12-16 აგვისტო",
+    description: "ახალგაზრდობის ხმა",
+    image: "./images/debate1.jpg",
     status: "open",
     participants: 25,
-    maxParticipants: 30
+    maxParticipants: 30,
+    organizer: {
+      name: "GIDE",
+      logo: "./images/GIDE.png"
+    }
   },
   {
     id: 6,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
+    title: "პროგრამირება სკოლის პარალელურად",
+    category: "course",
+    subject: "პროგრამირება",
+    age: "14-17 წლამდე",
+    location: "თბილისი, საქართველო",
     date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
+    description: "ItStep Academy",
+    image: "./images/ItStep_1.png",
     status: "open",
     participants: 25,
-    maxParticipants: 30
+    maxParticipants: 30,
+    organizer: {
+      name: "ItStep Academy",
+      logo: "./images/it-step.png"
+    }
   },
   {
     id: 7,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
+    title: "Junior IT აკადემია",
+    category: "course",
+    subject: "პროგრამირება",
+    age: "9-13 წელი",
+    location: "თბილისი, საქართველო",
     date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
+    description: "ItStep Academy",
+    image: "./images/ItStep_2.png",
     status: "open",
     participants: 25,
-    maxParticipants: 30
+    maxParticipants: 30,
+    organizer: {
+      name: "ItStep Academy",
+      logo: "./images/it-step.png"
+    }
   },
   {
     id: 8,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
+    title: "გრაფიკული დიზაინი სკოლის პარალელურად",
+    category: "course",
+    subject: "გრაფიკული დიზაინი",
+    age: "14-17 წლამდე",
+    location: "თბილისი, საქართველო",
     date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
+    description: "ItStep Academy",
+    image: "./images/ItStep_3.png",
     status: "open",
     participants: 25,
-    maxParticipants: 30
+    maxParticipants: 30,
+    organizer: {
+      name: "ItStep Academy",
+      logo: "./images/it-step.png"
+    }
   },
   {
     id: 9,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
+    title: "სამთო სათხილამურო კლუბი იქსტრიმი",
+    category: "camp",
+    subject: "ბანაკი",
+    age: "6-14 წლის",
+    location: "ბაკურიანი, საქართველო",
+    date: "12-16 აგვისტო",
+    description: "სამთო სათხილამურო კლუბი იქსტრიმი",
+    image: "./images/Xtreme.jpg",
     status: "open",
     participants: 25,
-    maxParticipants: 30
-  },
-  {
-    id: 10,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
-    participants: 25,
-    maxParticipants: 30
-  },
-  {
-    id: 11,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
-    participants: 25,
-    maxParticipants: 30
-  },
-  {
-    id: 12,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
-    participants: 25,
-    maxParticipants: 30
-  },
-  {
-    id: 13,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
-    participants: 25,
-    maxParticipants: 30
-  },
-  {
-    id: 14,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
-    participants: 25,
-    maxParticipants: 30
-  },
-  {
-    id: 15,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
-    participants: 25,
-    maxParticipants: 30
-  },
-  {
-    id: 16,
-    title: "პროგრამირების სახელოსნო",
-    category: "workshops",
-    subject: "technology",
-    grade: "middle",
-    location: "hybrid",
-    date: "2024-03-25",
-    description: "Python პროგრამირების სახელოსნო დამწყები მოსწავლეებისთვის.",
-    image: "./images/hero_image.jpeg",
-    status: "open",
-    participants: 25,
-    maxParticipants: 30
+    maxParticipants: 30,
+    organizer: {
+      name: "იქსტრიმი",
+      logo: "./images/Xtreme.jpg"
+    }
   },
 ];
 
@@ -401,10 +339,13 @@ function createEventCard(event) {
       </div>
       <p class="event_description">${event.description}</p>
       <div class="event_actions">
-        <div class="event_status ${statusClass}">
-          <i class="fas fa-circle"></i>
-          <span>${statusText}</span>
-        </div>
+
+        ${event.organizer ? `
+          <div class="event_organizer">
+            <img src="${event.organizer.logo}" alt="${event.organizer.name}" class="organizer_logo">
+            <span class="organizer_name">${event.organizer.name}</span>
+          </div>
+        ` : ''}
         <button class="event_btn primary">
           დეტალები
         </button>
