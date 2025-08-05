@@ -164,6 +164,24 @@ const eventsData = [
       logo: "./images/Xtreme.jpg"
     }
   },
+  {
+    id: 10,
+    title: "International Education Fair LEAF Tbilisi / Batumi",
+    category: "fair",
+    subject: "სამსახური",
+    age: "14-25",
+    location: "თბილისი, საქართველო",
+    date: "12-16 აგვისტო",
+    description: "განათლების საერთაშორისო გამოფენა",
+    image: "./images/leaf_1.png",
+    status: "open",
+    participants: 25,
+    maxParticipants: 30,
+    organizer: {
+      name: "იქსტრიმი",
+      logo: "./images/LEAF.jpg"
+    }
+  },
 ];
 
 // Global variables
